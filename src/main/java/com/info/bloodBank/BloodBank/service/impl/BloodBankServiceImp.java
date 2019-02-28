@@ -19,8 +19,8 @@ public class BloodBankServiceImp implements IBloodBankService{
 private BloodBankRepository bloodBankRepository;
 
 @Override
-public BloodBank addBloodBank(BloodBank bb) {
-	BloodBank savedBloodBank = bloodBankRepository.save(bb);
+public BloodBank addBloodBank(BloodBank bloodBank) {
+	BloodBank savedBloodBank = bloodBankRepository.save(bloodBank);
 	return savedBloodBank;
 
 }
@@ -49,8 +49,8 @@ public void deleteAllBloodBank() {
 
 @Override
 public void updateBloodBank(Integer bloodBankId, BloodBank updatedBloodBank) {
-	BloodBank bb = bloodBankRepository.getOne(bloodBankId);
-	bb.setId(bloodBankId);
+	BloodBank bloodBank = bloodBankRepository.getOne(bloodBankId);
+	bloodBank.setId(bloodBankId);
 	bloodBankRepository.save(updatedBloodBank);
 }
 }

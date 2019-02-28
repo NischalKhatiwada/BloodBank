@@ -29,8 +29,8 @@ public class BBRegistration{
 	private BloodBankServiceImp bloodBankService;
 	
 	@PostMapping(value = "/addBloodBank")
-	public ResponseEntity<Object> addBloodBank(@RequestBody BloodBank bb) {
-		BloodBank savedBloodBank = (BloodBank) bloodBankService.addBloodBank(bb);
+	public ResponseEntity<Object> addBloodBank(@RequestBody BloodBank bloodBank) {
+		BloodBank savedBloodBank = (BloodBank) bloodBankService.addBloodBank(bloodBank);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedBloodBank.getId())
 				.toUri();
 		return ResponseEntity.created(location).build();

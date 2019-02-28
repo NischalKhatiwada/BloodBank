@@ -6,7 +6,7 @@ import java.util.Optional;
 import com.info.bloodBank.BloodBank.entity.BloodBank;;
 
 public interface IBloodBankService {
-	public BloodBank addBloodBank(BloodBank bb);
+	public BloodBank addBloodBank(BloodBank bloodBank);
 
 	public List<BloodBank> getAllBloodBank();
 
@@ -16,5 +16,5 @@ public interface IBloodBankService {
 
 	public void deleteAllBloodBank();
 
-	public void updateBloodBank(Integer bloodBankId, BloodBank bb);
+	public void updateBloodBank(Integer bloodBankId, BloodBank bloodBank);
 }
