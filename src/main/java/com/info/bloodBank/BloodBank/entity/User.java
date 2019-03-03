@@ -25,7 +25,7 @@ public class User implements Serializable {
 	private String citizenNumber;
 	private String occupation;
 	private String bloodGroup;
-	private String imagePath;
+	private byte[] image;
 
 
 	public int getId() {
@@ -92,11 +92,11 @@ public class User implements Serializable {
 		this.bloodGroup = bloodGroup;
 	}
 	
-	public void setImagePath(String imagePath){
-		this.imagePath=imagePath;
+	public void setImage(String s){
+		this.image=s.getBytes();
 	}
 	
-	public String getImagePath(){
-		return imagePath;
+	public byte[] getImage(){
+		return image;
 	}
 }
